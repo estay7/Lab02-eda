@@ -1,1 +1,28 @@
+class Voto{
+    private int ID;
+    private int votanteID;
+    private int candidatoID;
+    private String timeStamp;
+public Voto(int ID, int votanteID, int candidatoID, String timeStamp){
+        this.ID=ID;
+        this.votanteID=votanteID;
+        this.candidatoID=candidatoID;
+        this.timeStamp=timeStamp;
+    }
+public int getID(){ 
+        return ID;
+    }
+public void setID(int ID){
+this.ID=ID
+}
+public int getvotanteID(){ 
+        return votanteID;
+    }
+public int getcandidatoID(){ 
+        return candidatoID;
+    }
+public String gettimeStamp(){ 
+        return timeStamp;
+    }
 
+}
