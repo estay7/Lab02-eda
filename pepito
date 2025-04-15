@@ -1,0 +1,16 @@
+Public class votante{
+public static void main ( strings[] args)
+{
+int id;
+string nombre;
+bool voto = true;
+votante(int id, string nombre,bool voto)
+{
+this->id=id;
+this->nombre= nombre;
+this->voto=voto;
+}
+public int getid()
+{
+return id;
+}
