@@ -1,5 +1,8 @@
-public class UrnaElectoral {
-    private LinkedList<Candidato> listaCandidatos;
-    private Stack<Voto> historialVotos;
-    private Queue<Voto> votosReportados;
-    private int idCounter;
+public class UrnaElectoral{
+
+private LinkedList<Candidato> listaCandidatos;
+private Stack<Voto> historialVotos;
+private Queue<Voto> votosReportados;
+private int idCounter;
+
+public UrnaElectoral(){}
