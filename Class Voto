@@ -1,4 +1,4 @@
-class Voto{
+public class Voto{
     private int ID;
     private int votanteID;
     private int candidatoID;
