@@ -5,4 +5,9 @@ private Stack<Voto> historialVotos;
 private Queue<Voto> votosReportados;
 private int idCounter;
 
-public UrnaElectoral(){}
+public UrnaElectoral(){
+listaCandidatos = new linkedList<>();
+histrorialVotos = new Stack<>();
+votosReportados = new Queue<>();
+idCounter = 0;
+}
