@@ -2,13 +2,13 @@ public class Votante {
 
     private int id;
     private String nombre;
-    private boolean voto = false;
+    private boolean voto;
 
     public Votante(int id, String nombre, boolean voto)
 {
         this.id = id;
         this.nombre = nombre;
-        this.voto = voto;
+        this.voto = false;
 }
     public int getId() 
 {
