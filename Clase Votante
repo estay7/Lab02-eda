@@ -2,7 +2,7 @@ public class Votante {
 
     private int id;
     private String nombre;
-    private boolean voto;
+    private boolean voto = false;
 
     public Votante(int id, String nombre, boolean voto)
 {
@@ -41,4 +41,5 @@ public class Votante {
 }
 public void marcarComoVotado()
 {
-if (
+this.voto=true;
+}
