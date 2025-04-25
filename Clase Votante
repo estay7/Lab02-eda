@@ -1,16 +1,44 @@
-Public class votante{
-public static void main ( strings[] args)
+public class Votante {
+
+    private int id;
+    private String nombre;
+    private boolean voto;
+
+    public Votante(int id, String nombre, boolean voto)
 {
-int id;
-string nombre;
-bool voto = true;
-votante(int id, string nombre,bool voto)
-{
-this->id=id;
-this->nombre= nombre;
-this->voto=voto;
+        this.id = id;
+        this.nombre = nombre;
+        this.voto = voto;
 }
-public int getid()
+    public int getId() 
 {
-return id;
+        return id;
+    }
+
+    public void setId(int id)
+{
+        this.id = id;
+    }
+
+    public String getNombre() 
+{
+        return nombre;
+    }
+
+    public void setNombre(String nombre)
+{
+        this.nombre = nombre;
+    }
+    public boolean isVoto() 
+{
+        return voto;
+    }
+
+    public void setVoto(boolean voto)
+{
+        this.voto = voto;
+    }
 }
+public void marcarComoVotado()
+{
+if (
