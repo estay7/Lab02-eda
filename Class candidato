@@ -1,38 +1,52 @@
+import java.util.Queue;
+import java.util.LinkedList;
 import java.util.Scanner;
-public Class Candidato
-{
+public class Candidato {
     //atributos
     private int id;
     private String nombre;
     private String partido;
     private Queue<Voto> votosRecibidos;
-    
+
     public Candidato(id, nombre, partido, votosRecibidos)
     {
         this.id=id;
         this.nombre=nombre;
         this.partido=partido;
-        this.votosRecibidos;
-        
+        this.votosRecibidos= new LinkedList<>();
+
     }
     public int getID(){
+
         return id;
     }
     public void setID(id){
+
         this.id=id;
     }
     public String getNombre(){
+
         return nombre;
     }
     public void setNombre(nombre){
+
         this.nombre=nombre;
     }
     public String getPartido(){
+
         return partido;
     }
     public void setPartido(partido){
+
         this.partido=partido;
     }
-    
-    
+    public void getVotosRecibidos(){
+        return votosRecibidos;}
+    public void setVotosRecibidos{
+        this.votosRecibidos= votosRecibidos;}
+
+    public Queue agregarVoto(Voto v)
+    {
+        votosRecibidos.add(v);
+    }
 }
