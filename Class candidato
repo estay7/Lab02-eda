@@ -8,7 +8,7 @@ public class Candidato {
     private String partido;
     private Queue<Voto> votosRecibidos;
 
-    public Candidato(id, nombre, partido, votosRecibidos)
+    public Candidato(int id, string nombre, strting partido,)
     {
         this.id=id;
         this.nombre=nombre;
