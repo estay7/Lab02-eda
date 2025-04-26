@@ -1,13 +1,70 @@
-public class UrnaElectoral{
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Stack;
 
-private LinkedList<Candidato> listaCandidatos;
-private Stack<Voto> historialVotos;
-private Queue<Voto> votosReportados;
-private int idCounter;
+class UrnaElectoral{
+    private LinkedList<Candidatos> listaCandidatos;
+    private Stack<Voto> historialVotos;
+    private Queue<Voto> votosReportados;
+    private int idCounter;
 
-public UrnaElectoral(){
-listaCandidatos = new linkedList<>();
-histrorialVotos = new Stack<>();
-votosReportados = new Queue<>();
-idCounter = 0;
+    public UrnaElectoral(){
+        listaCandidatos= new LinkedList<>();
+        historialVotos= new Stack<>();
+        votosReportados= new LinkedList<>();
+        idCounter=0;
+    }
+
+    public boolean verificarVotante(Votante votante){
+        return votante.isYaVoto();
+        }
+
+    public boolean registrarVoto(Votante votante, int candidatoID){
+        if(verificarVotante(votante)==false){
+            System.out.println("El votante ya votó");
+            return false;
+        }
+        Candidato candidato= null;
+        for(candidato c: listaCandidatos){
+            if(c.getId()==candidatoID){
+                candidato=c;
+                break;
+            }
+        }
+        Voto newVoto= new Voto(idCounter++,votante.getId, candidatoID, timeStamp.getTimeStamp());
+        candidato.agregarVoto(newVoto);
+        historialVotos.push(newVoto);
+        votante.marcarComoVotado;
+        return true;
+    }
+
+    public boolean reportarVoto(Candidato candidato, int idVoto){
+        Queue<Voto> votosTemporales=new LinkedList<>();
+        boolean encontrado=false;
+        while (candidato.getVotosRecibidos().isEmpty()=false) {
+            Voto v = candidato.getVotosRecibidos().poll();
+            if (v.getId() == idVoto && !encontrado) {
+                votosReportados.add(v);
+                encontrado = true;
+            } else {
+                votosTemporales.add(v);
+            }
+        }
+        candidato.setVotosRecibidos();
+        if(!encontrado){
+            System.out.println("Voto no encontrado");
+        }
+        return encontrado;
+    }
+
+    public String obtenerResultados(){
+        String resultados = "";
+
+        for (Candidato c : listaCandidatos) {
+            resultados += c.getNombre() + " (" + c.getPartido() + "): " + c.getVotosRecibidos().size() + " votos\n";
+        }
+
+        return resultados;
+    }
 }
