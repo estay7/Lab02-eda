@@ -1,45 +1,39 @@
-public class Votante {
-
+class Votante {
     private int id;
     private String nombre;
     private boolean voto;
 
-    public Votante(int id, String nombre, boolean voto)
-{
+    public Votante(int id, String nombre, boolean voto) {
         this.id = id;
         this.nombre = nombre;
-        this.voto = false;
-}
-    public int getId() 
-{
+        this.voto = voto;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(int id)
-{
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNombre() 
-{
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre)
-{
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public boolean isVoto() 
-{
+
+    public boolean isVoto() {
         return voto;
     }
 
-    public void setVoto(boolean voto)
-{
+    public void setVoto(boolean voto) {
         this.voto = voto;
     }
-}
-public void marcarComoVotado()
-{
-this.voto=true;
+
+    public void marcarComoVotado() {
+        this.voto = true;
+    }
 }
