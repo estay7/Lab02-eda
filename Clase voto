@@ -1,0 +1,58 @@
+    public Voto(int ID, int votanteID, int candidatoID, int hora) {
+        this.ID = ID;
+        this.votanteID = votanteID;
+        this.candidatoID = candidatoID;
+
+        int horas = hora / 10000;
+        int resto = hora % 10000;
+        int minutos = resto / 100;
+        int segundos = resto % 100;
+
+        String horaStr = "";
+        if (horas < 10) {
+            horaStr += "0";
+        }
+        horaStr += horas;
+
+        String minutoStr = "";
+        if (minutos < 10) {
+            minutoStr += "0";
+        }
+        minutoStr += minutos;
+
+        String segundoStr = "";
+        if (segundos < 10) {
+            segundoStr += "0";
+        }
+        segundoStr += segundos;
+        this.timeStamp = horaStr + ":" + minutoStr + ":" + segundoStr;
+    }
+
+    public int getId() {
+        return ID;
+    }
+
+    public int getVotanteID() {
+        return votanteID;
+    }
+
+    public int getCandidatoID() {
+        return candidatoID;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setId(int ID) {
+        this.ID = ID;
+    }
+
+    public void setVotanteID(int votanteID) {
+        this.votanteID = votanteID;
+    }
+
+    public void setCandidatoID(int candidatoID) {
+        this.candidatoID = candidatoID;
+    }
+}
